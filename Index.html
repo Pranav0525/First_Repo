@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
         <title>TO-DO List</title>
         <styles>
-            background-color:"yellow"; font-family:"comic sans MS";
+        body { font-family: Comic sans MS; padding: 20px;}
+        input { padding: 5px; font-size: 17px;}
+        button {padding: 5px 10px; margin-left: 5px;}
+
         </styles>
         
     </head>
     <body>
         <h1>TO-DO LIST</h1>
         <p>To Create A New To-Do List, Click The New Button.</p>
+        <input type="text" id="taskInput" placeholder="Enter New Task">
+        <button onclick="SubmitEvent">ADD</button>
         <script>
             function Create_new()
             {
