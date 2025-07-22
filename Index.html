@@ -6,9 +6,9 @@
     
         <title>TO-DO List</title>
         <styles>
-        body { font-family: Comic sans MS; padding: 20px;}
-        input { padding: 5px; font-size: 17px;}
-        button {padding: 5px 10px; margin-left: 5px;}
+        body { font-family: Comic sans MS; padding: 20px; }
+        input { padding: 5px; font-size: 17px; }
+        button { padding: 5px 10px; margin-left: 5px; }
 
         </styles>
         
@@ -17,12 +17,30 @@
         <h1>TO-DO LIST</h1>
         <p>To Create A New To-Do List, Click The New Button.</p>
         <input type="text" id="taskInput" placeholder="Enter New Task">
-        <button onclick="SubmitEvent">ADD</button>
+        <button onclick="AddTask()">ADD</button>
+        <ul id="taskList"></ul>
         <script>
-            function Create_new()
+            let taskList = getElementById("taskList");
+            let taskInput = getElementById("taskInput");
+
+            windows.onload = loadtask;
+
+            function AddTask()
             {
-                
+                let taskText = taskInput.value.trim();
+                if (taskText === "")return;
+
+                let li = createTaskElement(taskText);
+                taskList.appendChild(li);
+                saveTask(taskText);
+
+
+                taskInput.value = "";
             }
         </script>
     </body>
 </html>
+
+
+
+
