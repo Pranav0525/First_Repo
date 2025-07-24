@@ -36,6 +36,19 @@
 
 
                 taskInput.value = "";
+            }  
+
+            function createTaskElement(text) {
+                let li = document.createElement("li");
+                li.textContent = text;
+
+                li.onclick = function () {
+                    li.classList.toggle("completed");
+                };
+
+                let delBtn = document.createElement("button");
+
+            del.Btn.textContent = "Delete";
             }
         </script>
     </body>
