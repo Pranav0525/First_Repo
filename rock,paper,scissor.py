@@ -1,7 +1,8 @@
 import random
 
 computer = random.choice([1, 0, -1])
-you = input("Enter you choice:  ")
+you = input("Enter you choice:  ").lower()
+you = you.replace(" ", "")
 youDict = {"rock" : 1, "scissor" : 0, "paper" : -1}
 reverseDict = {1 : "rock", 0 : "scissor", -1 : "paper"}
 younum=youDict[you]
